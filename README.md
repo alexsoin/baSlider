@@ -43,3 +43,13 @@ Include the following near the end of the page.
     });
 </script>
 ```
+
+Or if the page displays multiple sliders
+
+```html
+<script>
+    $(document).ready(function () {
+        baSlider(".comparison-slider");
+    });
+</script>
+```
