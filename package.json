@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/alexsoin/ba-slider.git"
+    "url": "git://github.com/alexsoin/baSlider.git"
   },
   "dependencies": {},
   "devDependencies": {
