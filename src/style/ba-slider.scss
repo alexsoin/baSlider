@@ -1,0 +1,100 @@
+$minTablet: 767px;
+$bg-comparison-slider: #ffffff;
+$border-color-comparison-slider: #ffffff;
+$border-size-comparison-slider: 5px;
+$divider-line-color: rgba(0, 0, 0, 0.5);
+$divider-bg: #ffffff;
+$divider-size: 40px;
+$divider-size-increase: 20;
+
+.comparison-slider-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    background-color: $bg-comparison-slider;
+
+    .comparison-slider {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        border: $border-size-comparison-slider $border-color-comparison-slider solid;
+        box-sizing: border-box;
+
+        >img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            @media screen and (min-width : $minTablet) {
+                display: block;
+            }
+        }
+
+        .resize {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+
+            >img {
+                display: block;
+            }
+        }
+
+        .divider {
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background-color: $divider-line-color;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            margin-left: -1px;
+            cursor: ew-resize;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: $divider-size;
+                height: $divider-size;
+                left: -#{($divider-size/2)-2};
+                top: 50%;
+                margin-top: -#{$divider-size/2};
+                border-radius: 50%;
+                background-color: $divider-bg;
+                transition: all 0.1s ease-in-out;
+            }
+
+            &:after {
+                content: "\2039\a0\203A";
+                position: absolute;
+                font-size: 28px;
+                top: 50%;
+                margin-top: -24px;
+                margin-left: -12px;
+                color: #000000;
+                font-weight: 900;
+                text-align: center;
+                transition: all 0.1s ease-in-out;
+            }
+
+            &.draggable {
+                &:before {
+                    width: #{($divider-size+$divider-size-increase)};
+                    height: #{($divider-size+$divider-size-increase)};
+                    left: -#{(($divider-size+$divider-size-increase)/2)-2};
+                    margin-top: -#{($divider-size+$divider-size-increase)/2};
+                }
+            }
+        }
+    }
+}

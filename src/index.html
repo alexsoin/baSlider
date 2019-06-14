@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    //= template/head.html
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <h1 class="text-center"><span class="text-primary">baSlider</span> - Before and after (image comparison) slider</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="comparison-slider-wrapper">
+                <div id="ba-slider" class="comparison-slider">
+                        <div class="overlay">
+                            <div class="position-absolute text-white bg-info p-3" style="left: 20px; top: 20px;">left-top</div>
+                            <div class="position-absolute text-white bg-info p-3" style="right: 20px; top: 20px;">right-top</div>
+                        </div>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/marioPhoto-2.jpg" alt="marioPhoto 2"/>
+                    <div class="resize">
+                        <div class="overlay">
+                            <div class="position-absolute text-white p-3 bg-dark" style="top: 50%; width: 300px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa quia eligendi veniam qui, quidem delectus temporibus! Minima, consectetur, quos quaerat repellendus ipsum, porro velit voluptatum vitae nisi quibusdam consequatur?</div>
+                        </div>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/marioPhoto-1.jpg" alt="marioPhoto 1"/>
+                    </div>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+//= template/footer.html
+<script>
+    $(document).ready(function () {
+        baSlider("#ba-slider");
+    });
+</script>
+</body>
+</html>

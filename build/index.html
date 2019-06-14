@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Useful meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?v=01f7117d60239a44cbc7edf43f9fda6e">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css?v=01f7117d60239a44cbc7edf43f9fda6e" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/ba-slider.css?v=01f7117d60239a44cbc7edf43f9fda6e" rel="stylesheet" />
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js?v=01f7117d60239a44cbc7edf43f9fda6e" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js?v=01f7117d60239a44cbc7edf43f9fda6e" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js?v=01f7117d60239a44cbc7edf43f9fda6e" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <h1 class="text-center"><span class="text-primary">baSlider</span> - Before and after (image comparison) slider</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="comparison-slider-wrapper">
+                <div id="ba-slider" class="comparison-slider">
+                        <div class="overlay">
+                            <div class="position-absolute text-white bg-info p-3" style="left: 20px; top: 20px;">left-top</div>
+                            <div class="position-absolute text-white bg-info p-3" style="right: 20px; top: 20px;">right-top</div>
+                        </div>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/marioPhoto-2.jpg" alt="marioPhoto 2"/>
+                    <div class="resize">
+                        <div class="overlay">
+                            <div class="position-absolute text-white p-3 bg-dark" style="top: 50%; width: 300px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa quia eligendi veniam qui, quidem delectus temporibus! Minima, consectetur, quos quaerat repellendus ipsum, porro velit voluptatum vitae nisi quibusdam consequatur?</div>
+                        </div>
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/marioPhoto-1.jpg" alt="marioPhoto 1"/>
+                    </div>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/ba-slider.js?v=01f7117d60239a44cbc7edf43f9fda6e"></script>
+<script>
+    $(document).ready(function () {
+        baSlider("#ba-slider");
+    });
+</script>
+</body>
+</html>
